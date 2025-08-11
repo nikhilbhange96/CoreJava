@@ -80,6 +80,43 @@ class Car extends FourWheeler{
 		System.out.println("The color of vehicle is white");
 	}
 }
+//hierarchical inheritance
+
+class Base{
+	void basex() {
+		System.out.println("This is base class");
+	}
+}
+class A extends Base{
+	void ax() {
+		System.out.println("first child  class");
+	}
+}
+class B extends Base{
+	void bx() {
+		System.out.println("second child of base");
+	}
+}
+class C extends Base{
+	void cx() {
+		System.out.println("third child of base");
+	}
+}
+class D extends A{
+	void dx() {
+		System.out.println("first child of A");
+	}
+}
+class E extends A{
+	void ex() {
+		System.out.println("second child of A");
+	}
+}
+class F extends B{
+	void fx() {
+		System.out.println("first child of B");
+	}
+}
 public class Inheritance {
 	public static void main(String args[]){
 		Child c= new Child();
@@ -87,6 +124,18 @@ public class Inheritance {
 		Student s= new Student();
 		Nikhil n= new Nikhil();
 		Car c1=new Car();
+		D d1=new D();
+		E e1=new E();
+		F f1=new F();
+		d1.basex();
+		d1.ax();
+		d1.dx();
+		e1.basex();
+		e1.ax();
+		e1.ex();
+		f1.basex();
+		f1.bx();
+		f1.fx();
 		c1.brand();
 		c1.model();
 		c1.color();
